@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate Surprise</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #ff0000; /* Changed background color to red */
+        }
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #ff4500;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+        audio {
+            width: 0;
+            height: 0;
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Surprise for You!</h1>
+        <p>Dear didi and jiju,</p>
+        <p>Congratulations on your 1st anniversary</p>
+        <a href="#" id="showImageLink" onclick="playAudio(); return false;">Click here you two!</a>
+        <img src="https://raw.githubusercontent.com/kruysh/Didi-Jiju-wish/main/didi%20jiju.jpg" alt="Chocolate" id="chocolateImage" class="hidden">
+    </div>
+
+    <!-- Audio player -->
+    <audio id="audioPlayer" class="hidden" controls>
+        <source src="https://raw.githubusercontent.com/kruysh/Chocolate-for-my-valentine/main/Dil%20Laga%20Liya%20Maine%20-%20Lyrical%20%20Dil%20Hai%20Tumhaara%20%20Preity%20%26%20Arjun%20Rampal%20%20Alka%20Yagnik%2C%20Udit%20Narayan.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        function playAudio() {
+            var audioPlayer = document.getElementById("audioPlayer");
+            audioPlayer.currentTime = 33; // Set the playback position to 33 seconds
+            audioPlayer.classList.remove("hidden"); // Show the audio player
+            audioPlayer.play(); // Play the audio
+            var img = document.getElementById("chocolateImage");
+            img.classList.remove("hidden"); // Show the image
+        }
+    </script>
+</body>
+</html>
